@@ -6,12 +6,12 @@ services:
         ports:
             - "80:5000"
         volumes:
-            - /opt/pets-api:/opt/pets-api #local directory
+            - /d/DOCKER/cloudFlaskApi:/opt/cloudFlask-api #local directory
         links:
             - db:mongodb
-        container_name: petsapi_web_1
+        container_name: cloudFlask_web_1
         depends_on:
             - db
     db:
         image: mongo:3.0.2
-        container_name: petsapi_db_1
+        container_name: cloudFlask_db_1

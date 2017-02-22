@@ -15,11 +15,11 @@ RUN apt-get update && apt-get install -y \
     mongodb
 
 ##make a local directory
-RUN mkdir /opt/pets-api
+RUN mkdir /opt/cloudFlask-api
 
-WORKDIR /opt/pets-api
+WORKDIR /opt/cloudFlask-api
 
-ADD ..
+ADD . .
 
 RUN pip install -r requirements.txt
 
